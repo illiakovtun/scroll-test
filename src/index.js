@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from 'react-router-dom';
+import CommentsProvider from './contexts/Comments';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <CommentsProvider>
+      <App/>
+    </CommentsProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
